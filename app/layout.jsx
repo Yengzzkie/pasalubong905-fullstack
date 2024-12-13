@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
+import Navigation from "./components/Navbar";
 
 export const metadata = {
   title: "Pasalubong 905",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-[var(--primary-light)]">
-        <Navbar />
+        <Navigation />
         <main>{children}</main>
       </body>
     </html>

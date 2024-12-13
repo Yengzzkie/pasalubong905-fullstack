@@ -22,12 +22,3 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar {
-  ul {
-    li {
-      color: var(--primary-content);
-      font-weight: 600;
-      margin-left: 2rem;
-    }
-  }
-}
