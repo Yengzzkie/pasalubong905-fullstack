@@ -29,12 +29,17 @@ const TABLE_ROWS = [
     contact: "Manager",
     pickup: "04/10/21",
   },
+  {
+    name: "Richard Gran",
+    contact: "Manager",
+    pickup: "04/10/21",
+  },
 ];
  
 export default function OrderTable() {
   return (
-    <Card className="h-full w-screen overflow-scroll">
-      <table className="w-full min-w-max table-auto text-left">
+    <Card className="h-full w-screen overflow-scroll rounded-none">
+      <table className="w-full min-w-max table-auto text-left ">
         <thead>
           <tr>
             {TABLE_HEAD.map((head) => (
@@ -42,7 +47,7 @@ export default function OrderTable() {
                 <Typography
                   variant="small"
                   color="blue-gray"
-                  className="font-normal leading-none opacity-70 text-black font-semibold"
+                  className="leading-none opacity-70 text-black font-semibold"
                 >
                   {head}
                 </Typography>

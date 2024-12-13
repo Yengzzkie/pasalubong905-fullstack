@@ -1,9 +1,11 @@
-import Navbar from "./components/Navbar";
+import FeaturedCarousel from "./components/Carousel";
+import About from "./components/About";
 
 const HomePage = () => {
   return (
     <>
-      <div>HomePage</div>
+      <FeaturedCarousel />
+      <About />
     </>
   );
 };
