@@ -1,7 +1,10 @@
 "use client";
 import { useState } from "react";
+import axios from "axios";
+import Loader from "../components/Loader";
 
 export default function OrderForm() {
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     customerName: "",
     mobile: "",
@@ -24,6 +27,7 @@ export default function OrderForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const balance = formData.isPaid ? 0 : formData.totalBill - formData.downpayment;
   
@@ -41,20 +45,17 @@ export default function OrderForm() {
       hour12: true 
     });
   
-    const response = await fetch("/api/order", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...formData,
-        totalBill: formData.isPaid ? 0 : formData.totalBill, 
-        downpayment: formData.isPaid ? 0 : formData.downpayment, 
-        balance: balance.toFixed(2),
-        pickupDate: formattedPickupDate,
-        pickupTime: formattedPickupTime,
-      }),
+    const response = await axios.post("/api/order", {
+      ...formData,
+      totalBill: formData.isPaid ? 0 : formData.totalBill, 
+      downpayment: formData.isPaid ? 0 : formData.downpayment, 
+      balance: balance.toFixed(2),
+      pickupDate: formattedPickupDate,
+      pickupTime: formattedPickupTime,
     });
   
-    if (response.ok) {
+    if (response.status === 201) {
+      setLoading(false);
       alert("Order submitted successfully!");
       setFormData({
         customerName: "",
@@ -196,9 +197,9 @@ export default function OrderForm() {
 
         <button
           type="submit"
-          className="w-full bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-[var(--secondary-content)] py-2 rounded-md hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary-light"
+          className="flex justify-center w-full bg-[var(--secondary)] hover:bg-[var(--secondary-dark)] text-[var(--secondary-content)] py-2 rounded-md hover:bg-secondary-dark focus:outline-none focus:ring focus:ring-secondary-light"
         >
-          Submit Order
+          {loading ? <Loader /> : "Submit Order"}
         </button>
       </form>
     </div>
