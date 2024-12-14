@@ -1,45 +1,12 @@
 "use client"
 import { Card, Typography } from "@material-tailwind/react";
  
-const TABLE_HEAD = ["Name", "Contact", "Pickup Date", ""];
+const TABLE_HEAD = ["Name", "Contact", "Pickup Date/Time", "Total Bill", "Downpayment", "Balance", "Status", ""];
  
-const TABLE_ROWS = [
-  {
-    name: "John Michael",
-    contact: "437-123-1235",
-    pickup: "23/04/18",
-  },
-  {
-    name: "Alexa Liras",
-    contact:  "437-523-2352",
-    pickup: "23/04/18",
-  },
-  {
-    name: "Laurent Perrier",
-    contact: "416-523-2352",
-    pickup: "19/09/17",
-  },
-  {
-    name: "Michael Levi",
-    contact: "Developer",
-    pickup: "24/12/08",
-  },
-  {
-    name: "Richard Gran",
-    contact: "Manager",
-    pickup: "04/10/21",
-  },
-  {
-    name: "Richard Gran",
-    contact: "Manager",
-    pickup: "04/10/21",
-  },
-];
- 
-export default function OrderTable() {
+export default function OrderTable({data}) {
   return (
-    <Card className="h-full w-screen overflow-scroll rounded-none">
-      <table className="w-full min-w-max table-auto text-left ">
+    <Card className="h-full w-full overflow-scroll rounded-none">
+      <table className="w-full min-w-max table-auto text-center">
         <thead>
           <tr>
             {TABLE_HEAD.map((head) => (
@@ -56,21 +23,41 @@ export default function OrderTable() {
           </tr>
         </thead>
         <tbody>
-          {TABLE_ROWS.map(({ name, contact, pickup }, index) => (
-            <tr key={name} className="even:bg-gray-100 hover:bg-[var(--primary-dark)] hover:text-black">
+          {data.map((data) => (
+            <tr key={data.id} className="even:bg-gray-100 hover:bg-[var(--primary-dark)] hover:text-black">
               <td className="p-4">
                 <Typography variant="small" color="blue-gray" className="font-normal">
-                  {name}
+                  {data.customerName}
                 </Typography>
               </td>
               <td className="p-4">
                 <Typography variant="small" color="blue-gray" className="font-normal">
-                  {contact}
+                  {data.mobile}
                 </Typography>
               </td>
               <td className="p-4">
                 <Typography variant="small" color="blue-gray" className="font-normal">
-                  {pickup}
+                  {data.pickupDate} ({data.pickupTime})
+                </Typography>
+              </td>
+              <td className="p-4">
+                <Typography variant="small" color="blue-gray" className="font-normal">
+                  ${data.totalBill}
+                </Typography>
+              </td>
+              <td className="p-4">
+                <Typography variant="small" color="blue-gray" className="font-normal">
+                  ${data.downpayment}
+                </Typography>
+              </td>
+              <td className="p-4">
+                <Typography variant="small" color="blue-gray" className="font-normal">
+                  ${data.balance}
+                </Typography>
+              </td>
+              <td className="p-4">
+                <Typography variant="small" color="blue-gray" className="font-normal">
+                  <span className="border p-2 text-[var(--secondary-content)] bg-[var(--secondary-light)] border-green-500">{data.status}</span>
                 </Typography>
               </td>
               <td className="p-4">

@@ -25,7 +25,8 @@ model Order {
   id                String   @id @default(uuid())
   customerName      String
   mobile            String
-  pickupDate        DateTime
+  pickupDate        String
+  pickupTime        String
   downpayment       Float?   @default(0.0)
   balance           Float?
   totalBill         Float?
@@ -49,7 +50,7 @@ model Item {
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now())
   orderId   String?
-  order     Order?    @relation(fields: [orderId], references: [id])
+  order     Order?   @relation(fields: [orderId], references: [id])
 }
 
 enum Size {

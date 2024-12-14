@@ -3,7 +3,7 @@ import { cn } from "../lib/utils";
 import Link from "next/link";
 import React, { useState, createContext, useContext } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { IconAdjustmentsHorizontal, IconX } from "@tabler/icons-react";
 
 const SidebarContext = createContext(undefined);
 
@@ -88,8 +88,8 @@ export const MobileSidebar = ({
         "h-10 px-4 py-4 flex flex-row md:hidden items-center justify-between bg-neutral-100 bg-[var(--primary-content)] w-full"
       )}
       {...props}>
-      <div className="flex justify-end z-20 w-full">
-        <IconMenu2
+      <div className="flex justify-start z-20 w-full">
+        <IconAdjustmentsHorizontal
           className="text-neutral-800 dark:text-neutral-200"
           onClick={() => setOpen(!open)} />
       </div>

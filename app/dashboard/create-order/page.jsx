@@ -1,8 +1,8 @@
-import OrderForm from "../../components/Form";
+import OrderForm from "../../components/OrderForm";
 
 const CreateOrderPage = () => {
   return (
-    <div className="w-full p-3">
+    <div className="w-full h-fit overflow-auto p-3">
       <OrderForm />
     </div>
   );
