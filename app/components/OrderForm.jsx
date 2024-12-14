@@ -41,7 +41,7 @@ export default function OrderForm() {
       hour12: true 
     });
   
-    const response = await fetch("api/order", {
+    const response = await fetch("/api/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
