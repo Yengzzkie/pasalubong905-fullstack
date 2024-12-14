@@ -15,9 +15,9 @@ const OrdersCard = () => {
         <Card title="Email" subtitle="Manage email" href="#" Icon={FiMail} />
         <Card title="Team" subtitle="Manage team" href="#" Icon={FiUsers} />
         <Card
-          title="Billing"
-          subtitle="Manage cards"
-          href="#"
+          title="Create Order"
+          subtitle="Manage orders"
+          href="/dashboard/create-order"
           Icon={FiCreditCard}
         />
       </div>
