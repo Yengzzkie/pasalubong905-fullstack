@@ -26,3 +26,31 @@ body {
   position: unset;
   border: 2px solid red;
 }
+
+/* Set the page size for printing */
+@media print {
+  @page {
+    size: 4in 6in; /* Set the size of the page to 4 inches by 6 inches */
+    margin: 0; /* Remove any default margins */
+  }
+
+  /* Make sure only the necessary content is visible during printing */
+  body * {
+    visibility: hidden;
+  }
+  .print-content, .print-content * {
+    visibility: visible;
+  }
+
+  .print-content {
+    width: 4in;
+    height: 6in;
+    padding: 10px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  .print-button, .return-button {
+    display: none;
+  }
+}

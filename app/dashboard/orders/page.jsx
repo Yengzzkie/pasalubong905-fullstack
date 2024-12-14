@@ -24,9 +24,21 @@ const OrdersPage = () => {
     getOrders();
   }, []);
 
+  async function deleteOrder() {
+    setLoading(true)
+    try {
+      const response = await axios.delete(`/api/order/${id}`);
+      setData(response.data);
+    } catch (error) {
+      console.error("Error deleting order:", error);
+    } finally {
+      setLoading(false);
+    }
+  }
+
   return (
     <div className="flex justify-center items-center w-screen overflow-auto">
-      {loading ? <Loader /> : <OrderTable data={data} />}
+      {loading ? <Loader /> : <OrderTable data={data} delete={deleteOrder} />}
     </div>
   );
 };
