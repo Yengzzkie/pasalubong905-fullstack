@@ -33,7 +33,7 @@ export async function createOrder(orderData) {
         pickupTime,
         downpayment: parseFloat(downpayment),
         totalBill: parseFloat(totalBill),
-        balance,
+        balance: parseFloat(balance),
         isPaid,
         item,
         additionalComment,

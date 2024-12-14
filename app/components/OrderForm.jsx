@@ -13,24 +13,6 @@ export default function OrderForm() {
     additionalComment: "",
   });
 
-  const notifySuccess = () => {
-    toast.success("Movie added to the list", {
-      className: "toast",
-      position: "top-right",
-      autoClose: 3000,
-      hideProgressBar: false,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "colored",
-    });
-  };
-
-  function callToast() {
-    notifySuccess();
-  }
-
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     setFormData((prev) => ({
@@ -59,14 +41,14 @@ export default function OrderForm() {
       hour12: true 
     });
   
-    const response = await fetch("/api/order", {
+    const response = await fetch("api/order", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         ...formData,
         totalBill: formData.isPaid ? 0 : formData.totalBill, 
         downpayment: formData.isPaid ? 0 : formData.downpayment, 
-        balance: balance,
+        balance: balance.toFixed(2),
         pickupDate: formattedPickupDate,
         pickupTime: formattedPickupTime,
       }),
@@ -183,7 +165,7 @@ export default function OrderForm() {
             disabled
             type="number"
             name="balance"
-            value={formData.isPaid ? "" : formData.totalBill - formData.downpayment}
+            value={formData.isPaid ? "" : (formData.totalBill - formData.downpayment).toFixed(2)}
             onChange={handleChange}
             className="w-full p-2 border border-[var(--primary-dark)] rounded-md focus:outline-none focus:ring focus:ring-primary"
           />
