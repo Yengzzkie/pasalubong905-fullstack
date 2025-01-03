@@ -27,6 +27,15 @@ body {
   border: 2px solid red;
 }
 
+.text-shadow {
+  color: var(--primary-light);
+  text-shadow: 0 0 10px rgb(74, 74, 74);
+}
+
+.translateXY {
+  transform: translate(-50%, -50%);
+}
+
 /* Set the page size for printing */
 @media print {
   @page {
