@@ -7,8 +7,8 @@ import { ShuffleGrid } from "./CrewGallery";
 
 export default function About() {
   return (
-    <div className="grid grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-screen w-screen px-10 mb-20 lg:mb-0">
-      <div className="about__header--container px-10 my-8 w-screen lg:max-w-[45vw]">
+    <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-20 mb-20 lg:mb-0">
+      <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
         <div className="flex items-center">
           <h1 className="text-md lg:text-xl text-nowrap mr-6 tracking-wider">
             PASALUBONG905
@@ -38,7 +38,7 @@ export default function About() {
           <span className="text-[var(--primary-content)] font-normal">Learn More About Us</span>
         </Button>
       </div>
-      <div className="relative w-full ml-4 max-w-[40vw]">
+      <div className="relative w-full lg:ml-4 lg:max-w-[40vw]">
         <ShuffleGrid />
         {/* <div className="absolute -top-8 -left-8 lg:-top-12 lg:-left-12 bg-[var(--primary)] w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-10"></div>
         <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 border-[var(--primary-content)] border-[8px] bg-transparent w-[20vw] h-[20vw] lg:w-32 lg:h-32"></div>
