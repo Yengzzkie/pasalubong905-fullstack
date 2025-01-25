@@ -6,7 +6,7 @@ import pasalogo from "../../public/pasalogo.jpg";
 
 export default function About() {
   return (
-    <div className="bg-zinc-800 grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-32 mb-20 lg:mb-0 py-10">
+    <div className="bg-zinc-800 grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-32 lg:mb-0 py-10">
       <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
         <div className="flex items-center">
           <h1 className="text-md lg:text-xl text-nowrap mr-6 tracking-wider">

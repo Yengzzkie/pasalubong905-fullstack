@@ -12,8 +12,8 @@ const HomePage = () => {
       <FeaturedCarousel />
       <FeaturedProducts />
       <About />
-      <Banner />
       <PartnersLogo />
+      <Banner />
     </>
   );
 };

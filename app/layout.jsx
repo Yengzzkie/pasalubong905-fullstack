@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navigation from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const metadata = {
   title: "Pasalubong 905",
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body className="bg-white font-garamond">
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
