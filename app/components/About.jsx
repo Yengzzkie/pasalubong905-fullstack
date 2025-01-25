@@ -6,7 +6,7 @@ import pasalogo from "../../public/pasalogo.jpg";
 
 export default function About() {
   return (
-    <div className="bg-[var(--primary)] grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-32 mb-20 lg:mb-0">
+    <div className="bg-zinc-800 grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-32 mb-20 lg:mb-0 py-10">
       <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
         <div className="flex items-center">
           <h1 className="text-md lg:text-xl text-nowrap mr-6 tracking-wider">
@@ -42,11 +42,9 @@ export default function About() {
         <div className="absolute -top-8 -left-8 lg:-top-12 lg:-left-12 bg-[var(--primary-dark)] w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[999]"></div>
         <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 border-[var(--primary-content)] border-[8px] bg-transparent w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[990]"></div>
         <Image
-          className="shadow-lg border z-20 relative"
+          className="shadow-lg border z-20 relative w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
           src={pasalogo}
           alt="pasalubong-photo"
-          width="400"
-          height="400"
         />
         <div className="absolute -bottom-4 -right-4 bg-yellow-400 w-[50%] h-[50%] z-[5]"></div>
       </div>

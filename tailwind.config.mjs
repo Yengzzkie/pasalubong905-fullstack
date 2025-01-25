@@ -24,6 +24,7 @@ export default {
     extend: {
       fontFamily: {
         dancing: ["Dancing Script", "cursive"],
+        garamond: ["Cormorant Garamond", "Inter"],
       },
       colors: {
         background: "var(--background)",
