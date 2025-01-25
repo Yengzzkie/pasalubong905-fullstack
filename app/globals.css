@@ -1,11 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --primary: #f5e8be;
+  --primary: #fff7de;
   --primary-light: #fcf8ea;
   --primary-dark: #eed892;
   --primary-content: #9c7d18;
@@ -28,12 +29,15 @@ body {
 }
 
 .text-shadow {
-  color: var(--primary-light);
-  text-shadow: 0 0 10px rgb(74, 74, 74);
+  text-shadow: -3px 3px 3px gray;
 }
 
 .translateXY {
   transform: translate(-50%, -50%);
+}
+
+.drop-shadow {
+  filter: drop-shadow(-2px 2px 2px rgb(72, 72, 72));
 }
 
 /* Set the page size for printing */

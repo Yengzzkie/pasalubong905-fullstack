@@ -1,6 +1,10 @@
+import About from "../components/About";
+
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <div>
+      <About />
+    </div>
   )
 }
 

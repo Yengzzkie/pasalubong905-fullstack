@@ -3,11 +3,10 @@
 import { Button } from "@material-tailwind/react";
 import Image from "next/image"
 import pasalogo from "../../public/pasalogo.jpg";
-import { ShuffleGrid } from "./CrewGallery";
 
 export default function About() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-20 mb-20 lg:mb-0">
+    <div className="bg-[var(--primary)] grid grid-cols-1 lg:grid-cols-2 lg:flex-row items-center justify-evenly h-full lg:h-[80vh] w-screen px-8 lg:px-32 mb-20 lg:mb-0">
       <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
         <div className="flex items-center">
           <h1 className="text-md lg:text-xl text-nowrap mr-6 tracking-wider">
@@ -34,22 +33,22 @@ export default function About() {
           odio ad amet. Praesentium dolore omnis quia alias voluptatibus.
         </p>
 
-        <Button className="bg-[var(--primary-dark)] hover:bg-[var(--primary)] font-roboto rounded-none mt-6 mx-auto p-2 lg:mx-0">
+        <Button className="bg-[var(--primary-dark)] hover:bg-[var(--primary)] font-roboto rounded-none rounded-tl-lg rounded-br-lg mt-6 mx-auto p-2 lg:mx-0">
           <span className="text-[var(--primary-content)] font-normal">Learn More About Us</span>
         </Button>
       </div>
-      <div className="relative w-full pt-4 lg:ml-4 lg:max-w-[40vw]">
-        <ShuffleGrid />
-        {/* <div className="absolute -top-8 -left-8 lg:-top-12 lg:-left-12 bg-[var(--primary)] w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-10"></div>
-        <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 border-[var(--primary-content)] border-[8px] bg-transparent w-[20vw] h-[20vw] lg:w-32 lg:h-32"></div>
+      <div className="relative w-full pt-4 mx-auto max-w-fit mt-20 lg:mt-0">
+        {/* <ShuffleGrid /> */}
+        <div className="absolute -top-8 -left-8 lg:-top-12 lg:-left-12 bg-[var(--primary-dark)] w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[999]"></div>
+        <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 border-[var(--primary-content)] border-[8px] bg-transparent w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[990]"></div>
         <Image
-          className="shadow-lg border z-10"
+          className="shadow-lg border z-20 relative"
           src={pasalogo}
           alt="pasalubong-photo"
-          width="300"
-          height="300"
+          width="400"
+          height="400"
         />
-        <div className="absolute -bottom-4 -right-4 bg-yellow-400 w-[50%] h-[50%] -z-10"></div> */}
+        <div className="absolute -bottom-4 -right-4 bg-yellow-400 w-[50%] h-[50%] z-[5]"></div>
       </div>
     </div>
   );
