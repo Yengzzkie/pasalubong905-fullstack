@@ -10,7 +10,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="bg-[var(--primary-light)] overflow-x-hidden">
+      <body className="bg-white">
         <Navigation />
         <main>{children}</main>
       </body>

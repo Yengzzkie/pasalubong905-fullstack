@@ -2,7 +2,7 @@ import { ToastContainer } from "react-toastify";
 import FeaturedCarousel from "./components/Carousel";
 import About from "./components/About";
 import FeaturedProducts from "./components/Featured";
-import Reviews from "./components/PartnersLogo";
+import PartnersLogo from "./components/PartnersLogo";
 
 const HomePage = () => {
   return (
@@ -11,7 +11,7 @@ const HomePage = () => {
       <FeaturedCarousel />
       <FeaturedProducts />
       <About />
-      <Reviews />
+      <PartnersLogo />
     </>
   );
 };
