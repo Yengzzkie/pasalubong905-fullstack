@@ -1,14 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&display=swap');
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
   --primary: #fff7de;
-  --primary-light: #fcf8ea;
+  --primary-light: #e0e0e0;
   --primary-dark: #eed892;
   --primary-content: #9c7d18;
   --secondary: #bef5cc;
@@ -19,9 +18,9 @@
 }
 
 body {
-  color: var(--primary-content);
+  color: var(--primary-light);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Quicksand', 'Nunito', Arial, Helvetica, sans-serif;
 }
 
 .hamburger {
@@ -39,6 +38,31 @@ body {
 
 .drop-shadow {
   filter: drop-shadow(-2px 2px 2px rgb(72, 72, 72));
+}
+
+.text-slide-in {
+  animation: slideTextToRight 0.6s ease-in-out forwards;
+}
+
+.spin360 {
+  animation: spin 60s infinite linear;
+}
+
+@keyframes slideTextToRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Set the page size for printing */

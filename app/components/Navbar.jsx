@@ -14,7 +14,7 @@ function NavItem({ label, href }) {
     <a href={href}>
       <Typography
         as="li"
-        className="text-[var(--primary-content)] p-1 font-medium"
+        className="text-zinc-100 p-1 font-medium"
       >
         {label}
       </Typography>
@@ -45,14 +45,14 @@ export function Navigation() {
   }, []);
 
   return (
-    <Navbar color="transparent" fullWidth>
+    <Navbar color="transparent" className="absolute" fullWidth>
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
           href="/"
           className="mr-4 cursor-pointer text-lg font-bold text-[var(--primary-content)] drop-shadow-md"
         >
-          <span className="text-gray-600">Pasalubong</span>
+          <span className="text-zinc-200">Pasalubong</span>
           <span className="text-red-400">9</span>
           <span className="text-yellow-500">0</span>
           <span className="text-blue-400">5</span>

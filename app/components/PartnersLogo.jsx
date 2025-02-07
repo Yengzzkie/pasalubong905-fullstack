@@ -46,7 +46,7 @@ const ReviewCard = ({ img }) => {
 const PartnersLogo = () => {
   return (
     <div className="bg-white py-12">
-      <h1 className="text-shadow text-[var(--primary-dark)] text-center font-semibold text-5xl font-dancing">
+      <h1 className="text-shadow text-zinc-800 text-center font-semibold text-5xl">
         Our Trusted Partners
       </h1>
       <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-20">

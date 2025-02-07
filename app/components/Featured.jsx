@@ -1,17 +1,40 @@
 import ProductCard from "./ui/ProductCard";
-import { Salad, Carrot, LeafyGreen } from "lucide-react";
+import storeFront from "@/public/store.jpg"
+import foodBowl from "@/public/foodbowl.png";
+import kaldereta from "@/public/kaldereta.png";
+
+const productData = [
+  {
+    img: foodBowl.src,
+    title: "Dinner Platter",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempora rem cupiditate illum repellendus vitae cum a? Voluptas, dignissimos quia.",
+    price: "24.99"
+  },
+  {
+    img: kaldereta.src,
+    title: "Kaldereta",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempora rem cupiditate illum repellendus vitae cum a? Voluptas, dignissimos quia.",
+    price: "6.99"
+  },
+  {
+    img: foodBowl.src,
+    title: "Seafood Platter",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima tempora rem cupiditate illum repellendus vitae cum a? Voluptas, dignissimos quia.",
+    price: "24.99"
+  }
+]
 
 const FeaturedProducts = () => {
   return (
-    <div className="relative p-8 overflow-hidden">
-      <Salad className="absolute text-5xl w-80 h-80 text-zinc-200 rotate-[35deg] left-[-2%] bottom-0 z-[-1]" />
-      <Carrot className="absolute text-5xl w-80 h-80 text-zinc-200 rotate-[-90deg] right-[-2%] top-0 z-[-1]" />
-      <LeafyGreen className="absolute text-5xl w-80 h-80 text-zinc-200 rotate-[90deg] right-[-10%] lg:right-[50%] top-[50%] lg:top-[-10%] z-[-1]" />
-      <h1 className="text-center font-bold text-5xl font-dancing text-[var(--primary-dark)] text-shadow mt-16">Featured Products</h1>
-      <div className="pt-28 flex flex-col lg:flex-row justify-evenly">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+    <div className="relative bg-center bg-cover overflow-hidden"
+    style={{ backgroundImage: `url(${storeFront.src})` }} >
+      <div className="h-full w-full bg-zinc-900/90 p-10">
+        <h1 className="text-center font-bold text-5xl text-zinc-100 text-shadow mt-16">Featured Products</h1>
+        <div className="pt-28 flex flex-col lg:flex-row justify-evenly">
+          {productData.map((product) => (
+            <ProductCard key={product.title} props={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
