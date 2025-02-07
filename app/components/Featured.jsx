@@ -1,5 +1,5 @@
 import ProductCard from "./ui/ProductCard";
-import storeFront from "@/public/store.jpg"
+import vegetables from "@/public/vegetables.jpeg"
 import foodBowl from "@/public/foodbowl.png";
 import kaldereta from "@/public/kaldereta.png";
 
@@ -27,10 +27,10 @@ const productData = [
 const FeaturedProducts = () => {
   return (
     <div className="relative bg-center bg-cover overflow-hidden"
-    style={{ backgroundImage: `url(${storeFront.src})` }} >
+    style={{ backgroundImage: `url(${vegetables.src})` }} >
       <div className="h-full w-full bg-zinc-900/90 p-10">
-        <h1 className="text-center font-bold text-5xl text-zinc-100 text-shadow mt-16">Featured Products</h1>
-        <div className="pt-28 flex flex-col lg:flex-row justify-evenly">
+        <h1 className="text-center font-bold text-4xl lg:text-5xl text-zinc-100 text-shadow lg:mt-16">Featured Products</h1>
+        <div className="pt-16 lg:pt-28 flex flex-col lg:flex-row justify-evenly">
           {productData.map((product) => (
             <ProductCard key={product.title} props={product} />
           ))}

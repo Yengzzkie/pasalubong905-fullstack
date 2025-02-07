@@ -1,6 +1,7 @@
 import storeFront from "@/public/store.jpg";
 import foodBowl from "@/public/foodbowl.png";
 import Button from "./ui/Button";
+import { Highlight } from "./ui/HeroHighlight";
 
 const Hero = () => {
   return (
@@ -10,13 +11,15 @@ const Hero = () => {
     >
       {/* Overlay */}
       <div className="h-full w-full bg-zinc-900/85 flex items-center justify-center p-1 py-20 lg:p-10">
-        <div className="lg:flex items-center justify-evenly h-full w-full p-8">
+        <div className="lg:flex items-center lg:justify-evenly h-full w-full p-8">
           <div className="text-slide-in flex-1">
             <h1 className="text-white text-4xl lg:text-6xl font-bold mb-4 tracking-tight">
               Enjoy our authentic
             </h1>
             <h1 className="text-white text-4xl lg:text-6xl font-bold mb-8 tracking-tight">
-              Filipino Dishes
+              <Highlight className="text-black dark:text-white" >
+                Filipino Dishes
+              </Highlight>
             </h1>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo est
@@ -31,7 +34,7 @@ const Hero = () => {
 
           <div className="flex-1 p-8">
             <img
-            loading="lazy"
+              loading="lazy"
               src={foodBowl.src}
               alt="food-bowl"
               className="spin360 w-full"

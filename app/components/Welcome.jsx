@@ -4,6 +4,7 @@ import pasalogo from "../../public/pasalogo.jpg";
 import { FaFacebook, FaCarrot, FaPhone } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
 import Button from "./ui/Button";
+import Card2 from "./ui/ItemCard";
 
 const boxesData = [
   {
@@ -31,20 +32,7 @@ const boxesData = [
 export default function Welcome() {
   return (
     <div className="text-black lg:flex-row items-center justify-center h-full lg:h-screen w-screen px-8 lg:px-32 lg:mb-0 py-10">
-      <div className="flex flex-col lg:flex-row gap-6 justify-evenly">
-        {boxesData.map((data, index) => (
-          <div
-            key={index}
-            className="flex flex-col hover:bg-yellow-400 items-start justify-center gap-2 p-4 shadow-sm border w-full h-[300px]"
-          >
-            <div className="h-20 w-20">{data.icon}</div>
-            <h1 className="font-bold">{data.title}</h1>
-            <p>{data.text}</p>
-          </div>
-        ))}
-      </div>
-
-      <div className="lg:flex items-center mt-10 lg:mt-20">
+      <div className="lg:flex items-center mt-10">
         <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
           <div className="flex items-center">
             <h1 className="text-md font-dancing text-zinc-500 font-bold text-xl text-nowrap mr-2 tracking-wider">
@@ -52,7 +40,6 @@ export default function Welcome() {
             </h1>
             <span className="bg-zinc-500 w-full h-1"></span>
           </div>
-
           <h1 className="font-bold text-zinc-600 text-3xl lg:text-5xl my-6">
             Welcome to
             <span className="font-extrabold"> Pasalubong</span>
@@ -87,6 +74,19 @@ export default function Welcome() {
           />
           <div className="absolute -bottom-4 -right-4 bg-blue-700 w-[50%] h-[50%] z-[5]"></div>
         </div>
+      </div>
+
+      <div className="flex flex-col lg:flex-row gap-6 justify-evenly mt-20">
+        {boxesData.map((data, index) => (
+          <div
+            key={index}
+            className="flex flex-col hover:bg-yellow-400 items-start justify-center gap-2 p-4 shadow-sm border w-full h-[300px]"
+          >
+            <div className="h-20 w-20">{data.icon}</div>
+            <h1 className="font-bold">{data.title}</h1>
+            <p>{data.text}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

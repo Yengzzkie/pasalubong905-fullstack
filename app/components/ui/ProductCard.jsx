@@ -4,7 +4,7 @@ import Image from "next/image";
 function ProductCard({props}) {
   return (
     <div className="py-20">
-      <div className="relative flex flex-col bg-white hover:bg-[var(--primary-light)] justify-end w-[250px] min-h-[270px] border rounded-tl-2xl rounded-br-2xl p-4 mx-auto shadow-lg">
+      <div className="relative flex flex-col bg-white hover:bg-yellow-100 justify-end w-[250px] min-h-[270px] border rounded-tl-2xl rounded-br-2xl p-4 mx-auto shadow-lg">
         <div className="absolute top-[-35%] left-[50%] -translate-x-1/2 h-48 w-[80%]">
           <Image
             src={props.img}

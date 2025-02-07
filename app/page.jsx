@@ -6,6 +6,7 @@ import PartnersLogo from "./components/PartnersLogo";
 import Banner from "./components/Banner";
 import Hero from "./components/Hero";
 import Welcome from "./components/Welcome";
+import Menu from "./components/Menu";
 
 const HomePage = () => {
   return (
@@ -15,8 +16,9 @@ const HomePage = () => {
       <Hero />
       <Welcome />
       <FeaturedProducts />
+      <Menu />
       <PartnersLogo />
-      <Banner />
+      {/* <Banner /> */}
     </>
   );
 };
