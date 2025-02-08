@@ -3,6 +3,7 @@
 import { Button } from "@material-tailwind/react";
 import Image from "next/image"
 import pasalogo from "../../public/pasalogo.jpg";
+import { ShuffleGrid } from "./CrewGallery";
 
 export default function About() {
   return (
@@ -32,22 +33,9 @@ export default function About() {
           neque in minus dignissimos molestiae sequi a voluptates! Accusantium
           odio ad amet. Praesentium dolore omnis quia alias voluptatibus.
         </p>
-
-        <Button className="bg-[var(--primary-dark)] hover:bg-[var(--primary)] font-roboto rounded-none rounded-tl-lg rounded-br-lg mt-6 mx-auto p-2 lg:mx-0">
-          <span className="text-[var(--primary-content)] font-normal">Learn More About Us</span>
-        </Button>
       </div>
-      <div className="relative w-full pt-4 mx-auto max-w-fit mt-20 lg:mt-0">
-        {/* <ShuffleGrid /> */}
-        <div className="absolute -top-8 -left-8 lg:-top-12 lg:-left-12 bg-[var(--primary-dark)] w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[999]"></div>
-        <div className="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 border-[var(--primary-content)] border-[8px] bg-transparent w-[20vw] h-[20vw] lg:w-32 lg:h-32 z-[990]"></div>
-        <Image
-          className="shadow-lg border z-20 relative w-[250px] h-[250px] lg:w-[350px] lg:h-[350px]"
-          src={pasalogo}
-          alt="pasalubong-photo"
-        />
-        <div className="absolute -bottom-4 -right-4 bg-yellow-400 w-[50%] h-[50%] z-[5]"></div>
-      </div>
+      
+      <ShuffleGrid />
     </div>
   );
 }

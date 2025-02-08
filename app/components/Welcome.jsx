@@ -4,7 +4,7 @@ import pasalogo from "../../public/pasalogo.jpg";
 import { FaFacebook, FaCarrot, FaPhone } from "react-icons/fa";
 import { ImSpoonKnife } from "react-icons/im";
 import Button from "./ui/Button";
-import Card2 from "./ui/ItemCard";
+import Card2 from "./ui/MenuCard";
 
 const boxesData = [
   {
@@ -35,10 +35,10 @@ export default function Welcome() {
       <div className="lg:flex items-center mt-10">
         <div className="about__header--container my-2 w-full lg:max-w-[40vw]">
           <div className="flex items-center">
-            <h1 className="text-md font-dancing text-zinc-500 font-bold text-xl text-nowrap mr-2 tracking-wider">
+            <h1 className="font-dancing text-yellow-500 text-2xl text-nowrap mr-2 tracking-wider">
               About Us
             </h1>
-            <span className="bg-zinc-500 w-full h-1"></span>
+            <span className="bg-yellow-500 w-full h-[2px]"></span>
           </div>
           <h1 className="font-bold text-zinc-600 text-3xl lg:text-5xl my-6">
             Welcome to

@@ -1,5 +1,6 @@
 import pasalubong from "@/public/pasalogo.jpg";
 import storeFront from "@/public/store.jpg";
+import Link from "next/link";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -26,12 +27,12 @@ const Footer = () => {
               </h1>
             </a>
           </div>
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 sm:gap-6 lg:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-white">
+              <h2 className="mb-6 text-sm font-bold text-yellow-500">
                 STORE SCHEDULE
               </h2>
-              <ul className="text-gray-200 font-medium">
+              <ul className="text-gray-200 text-sm lg:text-base">
                 <li className="mb-2">Monday: 10 AM - 7 PM</li>
                 <li className="mb-2">Tuesday: 10 AM - 7 PM</li>
                 <li className="mb-2">Wednesday: 10 AM - 7 PM</li>
@@ -42,10 +43,10 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
+              <h2 className="mb-6 text-sm font-bold uppercase text-yellow-500">
                 Address
               </h2>
-              <p className="text-gray-200 font-medium">
+              <p className="text-gray-200 text-sm lg:text-base font-medium">
                 210 Bond St W Unit A, Oshawa, ON L1J 2L7
               </p>
               <div className="mt-4">
@@ -59,6 +60,13 @@ const Footer = () => {
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © {currentYear} Pasalubong905. All Rights Reserved.
           </span>
+
+          <div>
+            <span className="text-xs">
+              Designed and developed by
+            </span>
+            <Link className="font-bold ml-1" href={"https://manuel-gatchalian.com/"}>Yengzzkie DzignTech</Link>
+          </div>
         </div>
       </div>
     </footer>

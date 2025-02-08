@@ -45,7 +45,7 @@ export function Navigation() {
   }, []);
 
   return (
-    <Navbar color="transparent" className="absolute" fullWidth>
+    <Navbar className="bg-zinc-900/90 backdrop-blur-lg border-none sticky top-0 z-[999]" fullWidth>
       <div className="container mx-auto flex items-center justify-between">
         <Typography
           as="a"
