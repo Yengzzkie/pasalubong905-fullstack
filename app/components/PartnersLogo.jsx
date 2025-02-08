@@ -46,10 +46,18 @@ const ReviewCard = ({ img }) => {
 const PartnersLogo = () => {
   return (
     <div className="bg-white py-12">
-      <h1 className="text-shadow text-zinc-800 text-center font-semibold text-5xl">
+      <div className="flex items-center justify-center">
+        <span className="bg-yellow-500 h-[2px] w-[100px] rounded-lg"></span>
+        <h1 className="text-2xl font-dancing font-bold text-yellow-500 text-center text-nowrap mx-2">
+          Affiliates
+        </h1>
+        <span className="bg-yellow-500 h-[2px] w-[100px] rounded-lg"></span>
+      </div>
+      <h1 className="text-zinc-600 text-center font-semibold text-4xl mt-6">
         Our Trusted Partners
       </h1>
-      <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-20">
+      <p className="text-center text-zinc-500 mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum vero, atque molestias deserunt eaque dicta ipsam quis tempore perferendis consequuntur.</p>
+      <div className="relative flex h-full w-full flex-col items-center justify-center overflow-hidden py-8">
         <Marquee pauseOnHover className="[--duration:20s]">
           {firstRow.map((review) => (
             <ReviewCard key={review.username} {...review} />
