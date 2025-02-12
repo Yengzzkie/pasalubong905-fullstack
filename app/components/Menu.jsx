@@ -1,3 +1,5 @@
+import { menulist } from "../data/menulist";
+
 import foodGroup1 from "@/public/foodgroup1.jpg";
 
 const itemsData = [
@@ -77,9 +79,9 @@ const Menu = () => {
       <div className="lg:grid grid-cols-2 auto-rows-auto gap-8 bg-yellow-100/50 shadow-md h-auto w-[90%] lg:w-[80%] mx-auto p-4 lg:p-8 items-start mt-10">
         {itemsData.map((item, index) => (
           <div key={index} className="flex items-center text-zinc-600 mb-10 lg:mb-0">
-            <div className="w-16 h-full flex-shrink-0">
+            {/* <div className="w-16 h-full flex-shrink-0">
               <img className="w-full h-full object-cover" src={item.img} alt={item.productName} />
-            </div>
+            </div> */}
 
             <div className="flex flex-col mx-3 lg:mx-4">
               <div className="flex w-full border-b-[1px] border-zinc-400 py-1 h-fit">

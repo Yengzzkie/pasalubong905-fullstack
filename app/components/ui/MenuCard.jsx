@@ -56,7 +56,7 @@ function MenuCard({ props }) {
             {props.description}
           </p>
 
-          <div className="py-1">
+          {/* <div className="py-1">
             <p className="text-xs font-bold text-zinc-600">Select Size:</p>
             <div className="flex gap-2 text-sm mt-1">
               {sizes.map((size) => (
@@ -72,10 +72,10 @@ function MenuCard({ props }) {
                 </motion.span>
               ))}
             </div>
-          </div>
-          <div className="flex gap-2 items-center justify-between">
+          </div> */}
+          {/* <div className="flex gap-2 items-center justify-between">
             <span className="font-medium text-base lg:text-xl text-zinc-600">${props.price[selectedSize]}</span>
-          </div>
+          </div> */}
         </article>
       </div>
     </div>

@@ -1,31 +1,24 @@
 "use client";
 import Image from "next/image";
 import pasalogo from "../../public/pasalogo.jpg";
-import { FaFacebook, FaCarrot, FaPhone } from "react-icons/fa";
-import { ImSpoonKnife } from "react-icons/im";
+import Link from "next/link";
 import Button from "./ui/Button";
-import Card2 from "./ui/MenuCard";
+import uberEats from "@/public/ubereats.png"
+import skipTheDishes from "@/public/skipthedishes.png"
+import doorDash from "@/public/doordash.png"
 
 const boxesData = [
   {
-    icon: <FaFacebook size={50} />,
+    icon: uberEats.src,
     title: "Lorem ipsum dolor sit amet.",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, inventore? sit amet consectetur adipisicing elit",
+    link: "https://www.ubereats.com/ca/store/pasalubong-905/qrJQk32dS7GtkBSoQ8LtUQ?srsltid=AfmBOoq2qukY3zGHIt7OesEpE6ECKvgh4OKUZGsG4O5Ftxm3LV60hALk"
   },
   {
-    icon: <ImSpoonKnife size={50} />,
+    icon: skipTheDishes.src,
     title: "Lorem ipsum dolor sit amet.",
     text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, inventore? sit amet consectetur adipisicing elit",
-  },
-  {
-    icon: <FaCarrot size={50} />,
-    title: "Lorem ipsum dolor sit amet.",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, inventore? sit amet consectetur adipisicing elit",
-  },
-  {
-    icon: <FaPhone size={50} />,
-    title: "Lorem ipsum dolor sit amet.",
-    text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor, inventore? sit amet consectetur adipisicing elit",
+    link: "https://www.skipthedishes.com/pasalubong-bond"
   },
 ];
 
@@ -80,11 +73,11 @@ export default function Welcome() {
         {boxesData.map((data, index) => (
           <div
             key={index}
-            className="flex flex-col hover:bg-yellow-400 items-start justify-center gap-2 p-4 shadow-sm border w-full h-[300px]"
+            className="flex hover:bg-yellow-200/80 items-center justify-center gap-2 p-4 shadow-sm border w-full h-[300px]"
           >
-            <div className="h-20 w-20">{data.icon}</div>
-            <h1 className="font-bold">{data.title}</h1>
-            <p>{data.text}</p>
+            <Link href={data.link} target="_blank"><img src={data.icon} className="h-auto w-full" /></Link>
+            {/* <h1 className="font-bold">{data.title}</h1> */}
+            {/* <p>{data.text}</p> */}
           </div>
         ))}
       </div>

@@ -10,18 +10,18 @@ const Hero = () => {
       style={{ backgroundImage: `url(${storeFront.src})` }}
     >
       {/* Overlay */}
-      <div className="h-full w-full bg-zinc-900/85 flex items-center justify-center p-1 py-20 lg:p-10">
+      <div className="h-full w-full bg-zinc-900/65 flex items-center justify-center p-1 py-20 lg:p-10">
         <div className="lg:flex items-center lg:justify-evenly h-full w-full p-8">
           <div className="text-slide-in flex-1">
             <h1 className="text-white text-4xl lg:text-6xl font-bold mb-4 tracking-tight">
               Enjoy our authentic
             </h1>
             <h1 className="text-white text-4xl lg:text-6xl font-bold mb-8 tracking-tight">
-              <Highlight className="text-black dark:text-white" >
+              <Highlight className="text-white" >
                 Filipino Dishes
               </Highlight>
             </h1>
-            <p>
+            <p className="text-zinc-50">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo est
               consequuntur voluptate, dolorem doloremque, dolorum facilis neque
               nobis amet, libero odio eum! Cupiditate, autem architecto. Aut
